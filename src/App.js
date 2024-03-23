@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // Import BrowserRouter, Routes, and Route from react-router-dom
+import Layout from "./components/Layout"; // Import the Layout component
+import RandomPage from "./components/RandomPage"; // Import the RandomPage component
+import Home from "./components/Home";
+import About from "./components/About";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />} /> {/* Use self-closing syntax for <Route> */}
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/random" element={<RandomPage />} /> {/* Use self-closing syntax for <Route> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

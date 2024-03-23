@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav a {
+    color: #333;
+}
+.list ul li a{
+    color: black;
+    font-size: 20px;
+}
+.list ul li a:hover{
+    background-color: coral;
+}
+
+
+.bg-image {
+    background-image: url('/public/images/bannerimg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.bg-image h1 {
+    margin-top: 50px;
+}
+
+.randompage{
+    background-image: url('/public/images/randomimg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
